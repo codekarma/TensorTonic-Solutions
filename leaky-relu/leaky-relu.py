@@ -6,4 +6,4 @@ def leaky_relu(x: list | float, alpha: float = 0.01) -> np.ndarray:
     """
     # Write code here
     x_arr = np.asarray(x, dtype=float)
-    return np.asarray(np.where(x_arr >= 0, x_arr, alpha * x_arr))
+    return np.where(x_arr >= 0, x_arr, alpha * x_arr)
